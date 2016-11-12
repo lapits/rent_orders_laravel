@@ -8,7 +8,10 @@ class HomeController extends Controller
 {
     public function index() 
     {
-        return view('index');
+        $title = 'Лист заказа';
+        $pagetitle = 'Лист заказа';
+         
+        return view('pages.index',  compact('title','pagetitle'));
     }
     
 }
