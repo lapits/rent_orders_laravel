@@ -40,7 +40,21 @@ class AddFields2MessagesTable extends Migration
     public function down()
     {
         Schema::table('messages', function (Blueprint $table) {
-            //
+            $table->dropColumn('full_name_tenant');
+            $table->dropColumn('sort_company');
+            $table->dropColumn('position_sign');
+            $table->dropColumn('cert_sign');
+            $table->dropColumn('sign_person_name_rp');
+            $table->dropColumn('sign_person_name_ip');
+            $table->dropColumn('tenant_category');
+            $table->dropColumn('date_contract');
+            $table->dropColumn('inn_pay');
+            $table->dropColumn('kpp_pay');
+            $table->dropColumn('ogrn_pay');
+            $table->dropColumn('bik_pay');
+            $table->dropColumn('acc_pay');
+            $table->dropColumn('bank_pay');
+            $table->dropColumn('acc_korr_pay');
         });
     }
 }
