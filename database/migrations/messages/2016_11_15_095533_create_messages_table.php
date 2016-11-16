@@ -22,7 +22,7 @@ class CreateMessagesTable extends Migration
             $table->integer('fns_code'); // номер ФНС
             $table->text('address'); // адрес помещения строкой
             $table->integer('room_space'); // площадь помещения
-            $table->integer('room_number'); // номер комнаты
+            $table->char('room_number',10); // номер комнаты
             $table->unsignedTinyInteger('service_type'); // вид услуги (договор аренды, коворкинг и т.п.
             $table->boolean('need_address'); // Требуется ли услуга указания адреса постоянного местонахождения и.о. Арендатора в выбранном объекте?
             $table->boolean('agree_client_pay'); // Вы соглашаетесь с тем, что Ваш клиент обязуется оплатить адрес постоянного местонахождения в объекте?

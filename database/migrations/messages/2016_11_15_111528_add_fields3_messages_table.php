@@ -28,6 +28,8 @@ class AddFields3MessagesTable extends Migration
             $table->string('request_phone_work'); // Телефон рабочий для связи
             $table->string('request_phone_mobile'); // Телефон мобильный для связи
             $table->string('request_email'); // Эл. почта
+            
+            $table->date('date_send'); // дата последней отправки или выгрузки
         });
     }
 
@@ -54,6 +56,7 @@ class AddFields3MessagesTable extends Migration
             $table->dropColumn('request_phone_mobile');
             $table->dropColumn('request_email');
             
+            $table->dropColumn('date_send');
         });
     }
 }
