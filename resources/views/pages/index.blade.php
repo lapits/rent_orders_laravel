@@ -100,10 +100,75 @@
                 </select>
             </div>
         </div>
+        <div class="form-group">
+            <label class="control-label" for="month_payment_summa">Укажите сумму ежемесячных перечислений по договору:</label>
+            <div class="controls">
+                <input class="form-control" placeholder="" name="month_payment_summa" type="number" id="month_payment_summa">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="need_invoice">Укажите, необходимо ли выставить счет на оплату (да/нет):</label>
+            <div class="controls">
+                <select class="form-control" size="2" name="need_invoice" id="need_invoice">
+                    <option value=1>да</option>
+                    <option value=2>нет</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="need_cert_completion">Укажите, необходимо ли предоставить акт/акты оказания услуг</label>
+            <div class="controls">
+                <select class="form-control" size="2" name="need_cert_completion" id="need_cert_completion">
+                    <option value=1>да</option>
+                    <option value=2>нет</option>
+                </select>
+            </div>
+        </div>
     </div>    
         
     <div class="form-group">
-        <div class="h3 bg-warning">Контактная информация лица, заполнившего заявку :</div>
+        <div class="h3 bg-warning">Данные Стороны по договору (Арендатора) :</div>
+        <div class="form-group">
+            <label class="control-label" for="full_name_tenant">Полное наименование Арендатора (Точно так, как оно должно быть прописано в договоре)</label>
+            <div class="controls">
+                <input class="form-control" placeholder="ООО 'Ромашка и Цветы'" name="full_name_tenant" type="text" id="full_name_tenant">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="sort_company">Организационно-правовая форма Арендатора</label>
+            <div class="controls">
+                <input class="form-control" placeholder="ООО, ЗАО, ПАО, И.П. и т.п." name="sort_company" type="text" id="sort_company">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="position_sign">Должность лица, являющегося подписантом по договору Аренды от лица Арендатора:</label>
+            <div class="controls">
+                <input class="form-control" placeholder="Генеральный директор, Директор, 1-й заместитель генерального директора, Управляющий, Президент и т.п." name="position_sign" type="text" id="position_sign">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="cert_sign">Документ - основание полномочий подписанта от лица Арендатора:</label>
+            <div class="controls">
+                <input class="form-control" placeholder="Устав, доверенность №, приказ № и т.п." name="cert_sign" type="text" id="cert_sign">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="sign_person_name_rp">Ф.И.О. подписанта от лица Арендатора в родительном падеже</label>
+            <div class="controls">
+                <input class="form-control" placeholder="Иванова Ивана Ивановича" name="sign_person_name_rp" type="text" id="sign_person_name_rp">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="sign_person_name_ip">Фамилия и инициалы подписанта от лица Арендатора в именительном падеже</label>
+            <div class="controls">
+                <input class="form-control" placeholder="Иванов И. И." name="sign_person_name_ip" type="text" id="sign_person_name_ip">
+            </div>
+        </div>
+        
+    </div>    
+
+    <div class="form-group">
+        <div class="h3 bg-info">Контактная информация лица, заполнившего заявку :</div>
         <div class="form-group">
             <label class="control-label" for="name">Имя *</label>
             <div class="controls">
