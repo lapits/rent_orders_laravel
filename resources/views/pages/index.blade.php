@@ -230,39 +230,39 @@
         <div class="form-horizontal" id="section_tenant_category_2">
             <div class="h5 form-group">Укажите следующие данные арендатора:</div>
             <div class="form-group">
-                <label class="control-label" for="inn_pay"></label>
+                <label class="control-label" for="inn"></label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="ИНН" name="inn_pay" type="text" id="inn_pay">
+                    <input class="form-control" placeholder="ИНН" name="inn" type="text" id="inn">
                 </div>
-                <label class="control-label" for="kpp_pay"></label>
+                <label class="control-label" for="kpp"></label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="КПП" name="kpp_pay" type="text" id="kpp_pay">
+                    <input class="form-control" placeholder="КПП" name="kpp" type="text" id="kpp">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label" for="ogrn_pay"></label>
+                <label class="control-label" for="ogrn"></label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="ОГРН" name="ogrn_pay" type="text" id="ogrn_pay">
+                    <input class="form-control" placeholder="ОГРН" name="ogrn" type="text" id="ogrn">
                 </div>
-                <label class="control-label" for="bik_pay"></label>
+                <label class="control-label" for="bik"></label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="БИК банка" name="bik_pay" type="number" id="bik_pay">
+                    <input class="form-control" placeholder="БИК банка" name="bik" type="number" id="bik">
                 </div>
             </div>
             <div class="form-group">        
-                <label class="control-label" for="acc_pay"></label>
+                <label class="control-label" for="acc"></label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="Номер банковского счета" name="acc_pay" type="number" id="acc_pay">
+                    <input class="form-control" placeholder="Номер банковского счета" name="acc" type="number" id="acc">
                 </div>
-                <label class="control-label" for="bank_pay"></label>
+                <label class="control-label" for="bank"></label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="Название банка" name="bank_pay" type="text" id="bank_pay">
+                    <input class="form-control" placeholder="Название банка" name="bank" type="text" id="bank">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label" for="acc_korr_pay"></label>
+                <label class="control-label" for="acc_korr"></label>
                 <div class="col-sm-5">
-                    <input class="form-control" placeholder="Номер корр. счета в банке" name="acc_korr_pay" type="number" id="acc_korr_pay">
+                    <input class="form-control" placeholder="Номер корр. счета в банке" name="acc_korr" type="number" id="acc_korr">
                 </div>
             </div>
         </div>
