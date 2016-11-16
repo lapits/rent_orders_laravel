@@ -164,6 +164,111 @@
                 <input class="form-control" placeholder="Иванов И. И." name="sign_person_name_ip" type="text" id="sign_person_name_ip">
             </div>
         </div>
+        <div class="form-group">
+            <label class="control-label" for="tenant_category">Выберите к какой категории относится Арендатор:</label>
+            <div class="controls">
+                <select class="form-control" size="3" name="tenant_category" id="tenant_category">
+                    <option value=1>Первичная регистрация (вновь создаваемая организация)</option>
+                    <option value=2>Перерегистрация (переезд из другой внутри одного региона)</option>
+                    <option value=3>Миграция (смена региона)</option>
+                </select>
+            </div>
+        </div>
+        <!-- ПЕРВИЧНАЯ РЕГИСТРАЦИЯ  tenant_category=1 -->
+        
+        <div class="form-group">
+            <label class="control-label" for="date_contract">Укажите какой датой датировать договор (дату начала срока действия договора)</label>
+            <div class="controls">
+                <select class="form-control" size="3" name="date_contract" id="date_contract">
+                    <option value=1>С даты государственной регистрации юридического лица (Арендатора)</option>
+                    <option value=2>С даты подачи Вами данной заявки</option>
+                    <option value=3>Вы сообщите дату позднее</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-horizontal" id="section_tenant_category_1">
+            <div class="h5 form-group">Укажите следующие данные плательщика</div>
+            <div class="form-group">
+                <label class="control-label" for="inn_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="ИНН" name="inn_pay" type="text" id="inn_pay">
+                </div>
+                <label class="control-label" for="kpp_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="КПП" name="kpp_pay" type="text" id="kpp_pay">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="ogrn_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="ОГРН" name="ogrn_pay" type="text" id="ogrn_pay">
+                </div>
+                <label class="control-label" for="bik_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="БИК банка" name="bik_pay" type="number" id="bik_pay">
+                </div>
+            </div>
+            <div class="form-group">        
+                <label class="control-label" for="acc_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="Номер банковского счета" name="acc_pay" type="number" id="acc_pay">
+                </div>
+                <label class="control-label" for="bank_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="Название банка" name="bank_pay" type="text" id="bank_pay">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="acc_korr_pay"></label>
+                <div class="col-sm-5">
+                    <input class="form-control" placeholder="Номер корр. счета в банке" name="acc_korr_pay" type="number" id="acc_korr_pay">
+                </div>
+            </div>
+        </div>
+        
+        <!--  Перерегистрация        tenant_category=2 -->
+        <div class="form-horizontal" id="section_tenant_category_2">
+            <div class="h5 form-group">Укажите следующие данные арендатора:</div>
+            <div class="form-group">
+                <label class="control-label" for="inn_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="ИНН" name="inn_pay" type="text" id="inn_pay">
+                </div>
+                <label class="control-label" for="kpp_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="КПП" name="kpp_pay" type="text" id="kpp_pay">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="ogrn_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="ОГРН" name="ogrn_pay" type="text" id="ogrn_pay">
+                </div>
+                <label class="control-label" for="bik_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="БИК банка" name="bik_pay" type="number" id="bik_pay">
+                </div>
+            </div>
+            <div class="form-group">        
+                <label class="control-label" for="acc_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="Номер банковского счета" name="acc_pay" type="number" id="acc_pay">
+                </div>
+                <label class="control-label" for="bank_pay"></label>
+                <div class="col-sm-4">
+                    <input class="form-control" placeholder="Название банка" name="bank_pay" type="text" id="bank_pay">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="acc_korr_pay"></label>
+                <div class="col-sm-5">
+                    <input class="form-control" placeholder="Номер корр. счета в банке" name="acc_korr_pay" type="number" id="acc_korr_pay">
+                </div>
+            </div>
+        </div>
+        
+        <!--  Миграция               tenant_category=3 -->
+        
         
     </div>    
 
