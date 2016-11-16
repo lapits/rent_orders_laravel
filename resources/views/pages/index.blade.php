@@ -1,6 +1,6 @@
 @extends('index')
 @section('content')
-<form class="form-horizontal" method="POST" id="id-form_messages">
+<form role="form" class="form-horizontal" method="POST" id="id-form_messages">
 
     <div class="form-group">
         <div class="h3 bg-danger">Выбор адреса/объекта:</div>
@@ -268,6 +268,12 @@
         </div>
         
         <!--  Миграция               tenant_category=3 -->
+        <div class="form-group">
+            <label class="control-label" for="fns">Укажите полное наименование ИФНС, где состоит на учете: область, город, номер ИФНС и т.п.</label>
+            <div class="controls">
+                <input class="form-control" name="fns" type="text" id="fns" placeholder="Мурманская область, г. Зеленолесск, ул. Травердичева, дом 6А, ИФНС № 11 по Мурманской области.">
+            </div>
+        </div>
         
         
     </div>    
@@ -275,19 +281,37 @@
     <div class="form-group">
         <div class="h3 bg-info">Контактная информация лица, заполнившего заявку :</div>
         <div class="form-group">
-            <label class="control-label" for="name">Имя *</label>
+            <label class="control-label" for="request_company_name">Наименование Вашей Компании:</label>
             <div class="controls">
-                <input class="form-control" placeholder="Имя" name="name" type="text" id="name">
+                <input class="form-control" placeholder="ООО 'Мегаполис'" name="request_company_name" type="text" id="request_company_name">
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label" for="email">E-mail:</label>
+            <label class="control-label" for="request_name">Ваши Ф.И.О.</label>
             <div class="controls">
-                <input class="form-control" placeholder="E-mail" name="email" type="email" id="email">
+                <input class="form-control" placeholder="Трошкина Екатерина Петровна" name="request_name" type="text" id="request_name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="request_phone_work">Телефон для связи (рабочий):</label>
+            <div class="controls">
+                <input class="form-control" placeholder="8(495)722-88-99, доб.22-21" name="request_phone_work" type="tel" id="request_phone_work">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="request_phone_mobile">Телефон для связи (мобильный):</label>
+            <div class="controls">
+                <input class="form-control" placeholder="8(925)000-00-00" name="request_phone_mobile" type="tel" id="request_phone_mobile">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="request_email">эл. почта:</label>
+            <div class="controls">
+                <input class="form-control" placeholder="pochta@megapolis.ru" name="request_email" type="email" id="request_email">
             </div>
         </div>
     </div>
         
-        
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Отправить</button>    
 </form><hr>
 @stop
