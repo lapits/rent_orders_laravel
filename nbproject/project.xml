@@ -7,6 +7,8 @@
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>charset</word>
+            <word>endif</word>
+            <word>foreach</word>
             <word>html</word>
         </spellchecker-wordlist>
     </configuration>

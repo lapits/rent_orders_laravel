@@ -1,6 +1,6 @@
 @extends('index')
 @section('content')
-<form role="form" class="form-horizontal" method="POST" id="id-form_messages">
+<form role="form" class="form-horizontal" method="POST" id="id-form_messages" action="{{route('sendRentRequest')}}">
 
     <div class="form-group">
         <div class="h3 bg-danger">Выбор адреса/объекта:</div>
@@ -313,5 +313,7 @@
     </div>
         
     <button type="submit" class="btn btn-primary btn-lg btn-block">Отправить</button>    
+    
+    {{ csrf_field() }}
 </form><hr>
 @stop
