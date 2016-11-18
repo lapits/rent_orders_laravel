@@ -1,7 +1,7 @@
 @extends('index')
 @section('content')
-<!--<form role="form" class="form-horizontal" method="POST" id="id-form_messages" action="{{route('sendRentRequest')}}"-->
-<form role="form" class="form-horizontal" method="POST" id="id-form_messages" action="#">
+
+<form role="form" class="form-horizontal" id="id-form_messages" action="#">
     <div class="form-group">
         <div class="h3 bg-danger">Выбор адреса/объекта:</div>
         <div class="form-group">
@@ -312,7 +312,7 @@
         </div>
     </div>
         
-    <button id="sendRentRequest" type="submit" class="btn btn-primary btn-lg btn-block">Отправить</button>    
+    <button id="sendRentRequest" type="submit" class="btn btn-primary btn-lg btn-block">Отправить</button>
     
     {{ csrf_field() }}
 </form><hr>

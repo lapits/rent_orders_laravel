@@ -1,7 +1,11 @@
 
 $(document).ready(function(){
     $('#sendRentRequest').click(function(){
-       alert($(this).text());
+       var fname    = "12345";
+       var lname    = "refdfcvfgtt";
+       $.post('sendRentRequest', {firstname:fname, lastname:lname}, function(data){
+           console.log(data);
+       });
     });
 });
 

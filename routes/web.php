@@ -17,11 +17,12 @@ Route::get('/', function () {
 
 Route::get('/', ['uses' => 'HomeController@index', 'as' => 'home']);
 
-Route::post('/', ['uses' => 'HomeController@sendRentRequest', 'as' => 'sendRentRequest']);
+//Route::post('/', ['uses' => 'HomeController@sendRentRequest', 'as' => 'sendRentRequest']);
 
-//Route::post('/sendRentRequest', function(){
-//    if(Request::ajax()){
-//        return Response::json(Request::all());
-//    }
-//});
+Route::post('/sendRentRequest', function(){
+    if(Request::ajax()){
+        return 'sendRentRequest is OK';
+        //return Response::json(Request::all());
+    }
+});
 
