@@ -2,6 +2,7 @@
 $(document).ready(function(){
     $('#sendRentRequest').click(function(event){
         event.preventDefault();
+
         var dataString  = "";
         var fields = $(":input").serializeArray();
         $.each(fields, function(i, field) {
