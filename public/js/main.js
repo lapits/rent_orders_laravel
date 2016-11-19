@@ -1,11 +1,29 @@
 
 $(document).ready(function(){
     $('#sendRentRequest').click(function(){
-       var fname    = "12345";
-       var lname    = "refdfcvfgtt";
-       $.post('sendRentRequest', {firstname:fname, lastname:lname}, function(data){
-           console.log(data);
-       });
+        var dataString  = "";
+        var fields = $(":input").serializeArray();
+        $.each(fields, function(i, field) {
+            if (dataString==="") {
+                dataString   = dataString+""+field.name+"="+field.value;
+            } 
+            else {
+                dataString   = dataString+"&"+field.name+"="+field.value;
+            };
+        }
+        );
+
+        $.ajax({
+            type: "POST",
+            url: "sendRentRequest",
+            data: dataString,
+            success: function(data){
+                console.log(data);
+            },
+            error: function(jqXHR, textStatus){
+                console.log(textStatus );
+            }
+        });
     });
 });
 

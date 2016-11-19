@@ -14,8 +14,8 @@ class HomeController extends Controller
         return view('pages.index',  compact('title','pagetitle'));
     }
     
-//    public function sendRentRequest(Request $request)
-//    {
+    public function sendRentRequest(Request $request)
+    {
 //        $rules  = [
 //            'room_space' => 'required|validate'
 //            
@@ -30,7 +30,7 @@ class HomeController extends Controller
 //        
 //        /*$message->save();*/
 //                
-//        return redirect('/');
-//        
-//    }
+        return Response;
+        
+    }
 }
