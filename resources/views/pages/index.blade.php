@@ -1,6 +1,22 @@
 @extends('index')
 @section('content')
 
+<div class="container">
+    <nav class="navbar" role="navigation">
+        <ul class="nav navbar-nav">
+            <li class="btn btn-default">
+                <a href="{{ url('login') }}">Вход</a>
+            </li>
+            <li class="btn btn-default">
+                <a href="{{ url('register') }}">Регистрация</a>
+            </li>
+            <li class="btn btn-default">
+                <a href="{{ url('logout') }}">Выход</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
 <form role="form" class="form-horizontal" id="id-form_messages" action="#">
     <div class="form-group">
         <div class="h3 bg-danger">Выбор адреса/объекта:</div>

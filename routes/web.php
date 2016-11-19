@@ -23,3 +23,8 @@ Route::post('/sendRentRequest', function(){
     
 });
 
+Route::get('/logout', 'Auth\LoginController@logout');
+
+Auth::routes();
+
+
