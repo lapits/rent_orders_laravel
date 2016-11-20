@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    $('#sendRentRequest').click(function(event){
+    $('#sendRentRequest').on('click', function(event){
         event.preventDefault();
         var sendMsgButton   = $("#sendRentRequest");
         sendMsgButton.attr('disabled',true);
@@ -37,12 +37,18 @@ $(document).ready(function(){
 });
 
 function processOk(){
-    
-    
+$('#element_send_ok').bPopup({
+    appendTo: 'form'
+    , zIndex: 2
+    , autoClose: 3000
+    });
 };
 
 function processFail(){
-    
+$('#element_send_fail').bPopup({
+    appendTo: 'form'
+    , zIndex: 2
+    });
 };
 
 $.ajaxSetup({  

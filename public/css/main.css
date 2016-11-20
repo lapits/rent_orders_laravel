@@ -1,0 +1,19 @@
+#element_send_ok {
+    background-color:#fff;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    min-width:200px;
+    min-height: 100px;
+}
+
+#element_send_fail {
+    background-color:#f66;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    min-width:200px;
+    min-height: 100px;
+}

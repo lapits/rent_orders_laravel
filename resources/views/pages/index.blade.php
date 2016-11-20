@@ -329,7 +329,9 @@
     </div>
         
     <button id="sendRentRequest" type="submit" class="btn btn-primary btn-lg btn-block">Отправить</button>
-    
+    <div id="element_send_ok">Отправка выполнена успешно</div>
+    <div id="element_send_fail">Ошибка отправки</div>
+
     {{ csrf_field() }}
 </form><hr>
 @stop
