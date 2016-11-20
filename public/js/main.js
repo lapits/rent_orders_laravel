@@ -2,7 +2,9 @@
 $(document).ready(function(){
     $('#sendRentRequest').click(function(event){
         event.preventDefault();
-
+        var sendMsgButton   = $("#sendRentRequest");
+        sendMsgButton.attr('disabled',true);
+        sendMsgButton.text("Идет отправка...");
         var dataString  = "";
         var fields = $(":input").serializeArray();
         $.each(fields, function(i, field) {
@@ -19,15 +21,29 @@ $(document).ready(function(){
             type: "POST",
             url: "sendRentRequest",
             data: dataString,
-            success: function(data){
-                console.log(data);
+            success: function(msg){
+                console.log(msg);
+                processOk();
             },
             error: function(jqXHR, textStatus){
                 console.log(textStatus );
+                processFail();
             }
         });
+        sendMsgButton.removeAttr('disabled');
+        sendMsgButton.text("Отправить");
+        
     });
 });
+
+function processOk(){
+    
+    
+};
+
+function processFail(){
+    
+};
 
 $.ajaxSetup({  
     headers: {

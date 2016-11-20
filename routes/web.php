@@ -18,7 +18,20 @@ Route::get('/', ['uses' => 'HomeController@index', 'as' => 'home']);
 Route::post('/sendRentRequest', function(){
     
     if(Request::ajax()){
-        return Response::json(Request::all());
+        //return Response::json(Request::all());
+        
+        $message = new \App\Models\Message;
+
+        $message->message = 'это тест';
+
+        $saved  = $message->save();
+        
+        if ($saved) {
+            return 'ok';
+        }
+        else {
+            return 'not ok';
+        }
     }
     
 });
