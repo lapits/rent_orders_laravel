@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Message;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,6 @@ class HomeController extends Controller
         return view('pages.index',  compact('title','pagetitle'));
     }
 
-    
     /**
      * Create a new controller instance.
      *
