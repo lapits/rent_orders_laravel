@@ -62,14 +62,14 @@
             <label class="control-label" for="service_type">Выберите интересующий Вас вид услуги</label>
             <div class="controls">
                 <select class="form-control" size="3" name="service_type" id="service_type">
-                    <option value=1>1. Договор аренды почасовой (для проведения разовой встречи)</option>
-                    <option value=2>2. Договор коворкинга</option>
-                    <option selected value=3>3. Договор аренды (традиционный);</option>
+                    <option value="1">1. Договор аренды почасовой (для проведения разовой встречи)</option>
+                    <option value="2">2. Договор коворкинга</option>
+                    <option selected value="3">3. Договор аренды (традиционный);</option>
                 </select>
             </div>
         </div>
         
-        <div class="form-group">
+        <div class="form-group" id="need_address_group">
             <label class="control-label" for="need_address">Требуется ли услуга указания адреса постоянного местонахождения и.о. Арендатора в выбранном объекте?</label>
             <div class="controls">
                 <select class="form-control" size="2" name="need_address" id="need_address">
@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="agree_client_pay_group">
             <label class="control-label" for="agree_client_pay">Вы соглашаетесь с тем, что Ваш клиент обязуется оплатить адрес постоянного местонахождения в объекте?</label>
             <div class="controls">
                 <select class="form-control" size="2" name="agree_client_pay" id="agree_client_pay">
@@ -107,7 +107,7 @@
                 <input class="form-control" placeholder="" name="summa" type="number" id="summa">
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="period_payment_group">
             <label class="control-label" for="period_payment">Выберите вид оплаты:</label>
             <div class="controls">
                 <select class="form-control" size="2" name="period_payment" id="period_payment">
@@ -116,7 +116,7 @@
                 </select>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="month_payment_summa_group">
             <label class="control-label" for="month_payment_summa">Укажите сумму ежемесячных перечислений по договору:</label>
             <div class="controls">
                 <input class="form-control" placeholder="" name="month_payment_summa" type="number" id="month_payment_summa">
@@ -180,7 +180,7 @@
                 <input class="form-control" placeholder="Иванов И. И." name="sign_person_name_ip" type="text" id="sign_person_name_ip">
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="tenant_category_group">
             <label class="control-label" for="tenant_category">Выберите к какой категории относится Арендатор:</label>
             <div class="controls">
                 <select class="form-control" size="3" name="tenant_category" id="tenant_category">
@@ -192,7 +192,7 @@
         </div>
         <!-- ПЕРВИЧНАЯ РЕГИСТРАЦИЯ  tenant_category=1 -->
         
-        <div class="form-group">
+        <div class="form-group" id="date_contract_group">
             <label class="control-label" for="date_contract">Укажите какой датой датировать договор (дату начала срока действия договора)</label>
             <div class="controls">
                 <select class="form-control" size="3" name="date_contract" id="date_contract">
@@ -284,13 +284,14 @@
         </div>
         
         <!--  Миграция               tenant_category=3 -->
-        <div class="form-group">
-            <label class="control-label" for="fns">Укажите полное наименование ИФНС, где состоит на учете: область, город, номер ИФНС и т.п.</label>
-            <div class="controls">
-                <input class="form-control" name="fns" type="text" id="fns" placeholder="Мурманская область, г. Зеленолесск, ул. Травердичева, дом 6А, ИФНС № 11 по Мурманской области.">
+        <div class="form-group" id="section_tenant_category_3">
+            <div class="form-group" id="fns_group">
+                <label class="control-label" for="fns">Укажите полное наименование ИФНС, где состоит на учете: область, город, номер ИФНС и т.п.</label>
+                <div class="controls">
+                    <input class="form-control" name="fns" type="text" id="fns" placeholder="Мурманская область, г. Зеленолесск, ул. Травердичева, дом 6А, ИФНС № 11 по Мурманской области.">
+                </div>
             </div>
         </div>
-        
         
     </div>    
 
