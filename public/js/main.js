@@ -51,6 +51,10 @@ $(document).ready(function(){
         showHideVisibilityChangePeriodPayment();
     });
     
+    $('#type_payment').on('click', function(event){
+        showHideVisibilityChangeTypePayment();
+    });
+    
     $('#tenant_category').on('click', function(event){
         showHideVisibilityChangeTenantCategory();
     });
@@ -114,9 +118,24 @@ function showHideVisibilityChangePeriodPayment() {
     
 }; // showHideVisibilityChangePeriodPayment
 
+function showHideVisibilityChangeTypePayment() {
+    var selectTypePaymentVal      = $('select#type_payment').val();
+    var sectionTenantCategory1   = $('#section_tenant_category_1');
+    
+    if (selectTypePaymentVal==="2") {
+        sectionTenantCategory1.fadeIn(1000);
+    }
+    else {
+        sectionTenantCategory1.fadeOut(1000);
+    }
+    
+} // showHideVisibilityChangeTypePayment
+
 function showHideVisibilityChangeTenantCategory() {
-    var selectNeedAddressVal            = $('#need_address').val();
-    var selectTenantCategoryVal         = $('#tenant_category').val();
+    var selectNeedAddressVal         = $('#need_address').val();
+    var selectTenantCategoryVal      = $('#tenant_category').val();
+    var selectTypePaymentVal         = $('select#type_payment').val();
+    
     
     var dateContractGroup        = $('#date_contract_group');
     var sectionTenantCategory1   = $('#section_tenant_category_1');
@@ -124,11 +143,37 @@ function showHideVisibilityChangeTenantCategory() {
     var sectionTenantCategory3   = $('#section_tenant_category_3');
     
     if (selectNeedAddressVal==="1") {
-        dateContractGroup.fadeIn(1000);
-        sectionTenantCategory1.fadeIn(1000);
-        sectionTenantCategory2.fadeIn(1000);
-        sectionTenantCategory3.fadeIn(1000);
+        
+        if (selectTenantCategoryVal==="1") {
+            dateContractGroup.fadeIn(1000);
+            if (selectTypePaymentVal==="2") {
+                sectionTenantCategory1.fadeIn(1000);
+            }
+            else {
+                sectionTenantCategory1.fadeOut(1000);
+            }
+            sectionTenantCategory2.fadeOut(1000);
+            sectionTenantCategory3.fadeOut(1000);
+        }
+        else if (selectTenantCategoryVal==="2") {
+            dateContractGroup.fadeOut(1000);
+            
+            sectionTenantCategory1.fadeOut(1000);
+            sectionTenantCategory2.fadeIn(1000);
+            sectionTenantCategory3.fadeOut(1000);
+            
+        }
+        else if (selectTenantCategoryVal==="3") {
+            dateContractGroup.fadeOut(1000);
+            
+            sectionTenantCategory1.fadeOut(1000);
+            sectionTenantCategory2.fadeOut(1000);
+            sectionTenantCategory3.fadeIn(1000);
+            
+        };
+        
     }
+    
     else {
         dateContractGroup.fadeOut(1000);
         sectionTenantCategory1.fadeOut(1000);
